@@ -1,0 +1,56 @@
+/* =========================================================================
+   Main nav
+========================================================================= */
+.main-nav {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    
+    @include breakpoint(max-width $bp-md){
+        .sidebar-toggle{
+            display: none;
+        }
+    }
+    
+    @include breakpoint($bp-md) {
+        margin-top: 0;
+        text-align: left;
+        float: left;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    @include clearfix;
+    ul {
+        margin: 0 0 0 20px;
+        padding: 0;
+        list-style: none;
+        @include clearfix;
+        
+        li {
+            margin: 0 0 10px 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include breakpoint($bp-md) {
+                float: left;
+                margin: 0 15px 0 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: $color-secondary;
+        text-transform: uppercase;
+        @include ka-transition(color);
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+    

@@ -1,0 +1,20 @@
+/* =========================================================================
+   Base
+========================================================================= */
+* {
+    box-sizing: border-box;
+}
+p{
+    line-height: 1.4em;
+    max-width: 700px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color-dark;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,74 @@
+/* =========================================================================
+   Layout
+========================================================================= */
+#main-wrap, #main-footer, #main-header {
+    @include clearfix;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    overflow: hidden;
+}
+
+#main-header {
+    margin-top: $gutter;
+}
+
+#main-content {
+    width: 100%;
+    @include ka-transition(all);
+    @include breakpoint($bp-md) {
+        width: 70%;
+        float: left;
+        padding-right: $gutter;
+    }
+}
+
+#main-sidebar {
+    width: 100%;
+    overflow: hidden;
+    @include ka-transition(all);
+    @include breakpoint($bp-md) {
+        
+        width: 30%;
+        float: right;
+        padding-left: $gutter;
+    }
+}
+
+@include breakpoint($bp-md) {
+    .hide-sidebar {
+        #main-content {
+            @include ka-transition(all);
+            width: 100%;
+            padding-right: 0;
+        }
+        #main-sidebar {
+            @include ka-transition(all);
+            width: 0;
+            opacity: 0;
+        }
+    }
+}
+
+.logo {
+    margin: auto;
+    height: 100px;
+    display: block;
+    
+    &-wrap {
+        width: 230px;
+        margin: auto;
+        @include breakpoint($bp-md) {
+            float: left;
+        }
+        
+        @include clearfix;
+    }
+    
+    a {
+        display: block;
+        height: 100px;
+    }
+}
+
+
+

@@ -1,0 +1,31 @@
+.blocks{
+    
+    .block{
+        margin-bottom: 40px;
+        
+        @include breakpoint($bp-sm){
+            width: 1/2 * 100%;
+            margin-bottom: 20px;
+        }
+        @include breakpoint($bp-lg){
+            width: 1/3 * 100%;
+        }
+        @extend %columns;
+        
+
+        
+        
+        &__image{
+            
+        }
+        
+        &__title{
+            margin: 10px 0 10px 0;
+        }
+        
+        &__desc{
+            line-height: 1.6em;
+        }
+    }
+    
+}
